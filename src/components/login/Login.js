@@ -1,13 +1,15 @@
-import logo from "../../assets/logo-text.png";
+import TextLogo from "../common/logo";
 import classes from "./Login.module.css";
 
 const Login = () => {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <img src={logo} alt="" className={classes.logo} />
+        <TextLogo />
         <div className={classes.body}>
-          <form className={classes.form}></form>
+          <form className={classes.form}>
+            <div></div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,9 +1,3 @@
-.logo {
-  height: 51px;
-  width: 175px;
-  margin: 22px auto 12px;
-}
-
 .container {
   display: flex;
   flex-grow: 1;
