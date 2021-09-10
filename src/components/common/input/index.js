@@ -1,7 +1,11 @@
 import classes from "./index.module.css";
 
 const Input = ({ placeholder }) => {
-  return <input className={classes.input} placeholder={placeholder} />;
+  return (
+    <div className={classes.container}>
+      <input className={classes.input} placeholder={placeholder} />
+    </div>
+  );
 };
 
 export default Input;

@@ -1,11 +1,15 @@
-.input {
-  outline: none;
+.container {
+  background-color: #fafafa;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size: 16px;
   width: 100%;
-  background-color: #fafafa;
+  display: flex;
+  font-size: 14px;
+}
+
+.input {
+  outline: none;
   height: 36px;
   padding: 9px 0 7px 8px;
   overflow: hidden;
