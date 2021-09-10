@@ -16,7 +16,7 @@ const Login = () => {
                 <Input placeholder="Password" />
               </div>
               <div className={classes.button}>
-                <Button value="Log In" />
+                <Button value="Log In" disabled />
               </div>
             </div>
           </form>
