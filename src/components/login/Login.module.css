@@ -1,7 +1,9 @@
 .container {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -15,6 +17,7 @@
   min-width: 350px;
   box-sizing: border-box;
   border-radius: 1px;
+  height: fit-content;
 }
 
 .body {
@@ -62,4 +65,15 @@
   margin-top: 12px;
   text-align: center;
   text-decoration: none;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1px;
+  border: 1px solid #dbdbdb;
+  margin: 0 0 10px;
+  padding: 10px 0;
 }

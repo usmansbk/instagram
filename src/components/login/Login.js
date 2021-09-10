@@ -31,6 +31,7 @@ const Login = () => {
           </a>
         </div>
       </div>
+      <div className={classes.signup}></div>
     </div>
   );
 };
