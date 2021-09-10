@@ -25,6 +25,7 @@ const Input = ({ placeholder }) => {
           value={value}
         />
       </label>
+      <div className={classes.right} />
     </div>
   );
 };

@@ -55,3 +55,8 @@
 .inputFocus {
   padding: 14px 0 2px 8px;
 }
+
+.right {
+  height: 100%;
+  padding-right: 8px;
+}
