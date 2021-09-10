@@ -26,6 +26,9 @@ const Login = () => {
               </div>
             </div>
           </form>
+          <a href="/forgot" className={classes.link}>
+            Forgotten your password?
+          </a>
         </div>
       </div>
     </div>
