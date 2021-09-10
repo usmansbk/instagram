@@ -5,7 +5,7 @@ const Input = ({ placeholder }) => {
     <div className={classes.container}>
       <label className={classes.label}>
         <span className={classes.placeholder}>{placeholder}</span>
-        <input className={classes.input} placeholder={placeholder} />
+        <input className={classes.input} />
       </label>
     </div>
   );

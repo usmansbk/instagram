@@ -8,12 +8,9 @@
   font-size: 14px;
 }
 
-.input {
-  outline: none;
-  height: 36px;
-  padding: 9px 0 7px 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.container--focused {
+  border: 1px solid #a0a0a0;
+  font-size: 12px;
 }
 
 .label {
@@ -21,10 +18,6 @@
   flex: 1 0 0;
   height: 36px;
   position: relative;
-}
-
-.animate .placeholder {
-  transform: scale(0.83333) translate(-10px);
 }
 
 .placeholder {
@@ -40,4 +33,18 @@
   transition: transform ease-out 0.1s;
   user-select: none;
   white-space: nowrap;
+}
+
+.placeholder--animate {
+  transform: scale(0.83333) translate(-10px);
+}
+
+.input {
+  outline: none;
+  border: none;
+  flex: 1 0 auto;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis;
+  background-color: #fafafa;
 }
