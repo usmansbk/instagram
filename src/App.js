@@ -1,6 +1,8 @@
+import Login from "./components/login";
+
 function App() {
   return (
-      <h1>Instagram</h1>
+    <Login />
   );
 }
 
