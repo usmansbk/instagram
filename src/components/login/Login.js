@@ -1,5 +1,6 @@
 import TextLogo from "../common/logo";
 import Input from "../common/input";
+import Button from "../common/button";
 import classes from "./Login.module.css";
 
 const Login = () => {
@@ -13,6 +14,9 @@ const Login = () => {
               <div className={classes.inputs}>
                 <Input placeholder="Phone number, username or email address" />
                 <Input placeholder="Password" />
+              </div>
+              <div className={classes.button}>
+                <Button value="Log In" />
               </div>
             </div>
           </form>
