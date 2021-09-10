@@ -49,3 +49,7 @@
   margin: 8px 40px;
   display: flex;
 }
+
+.oauth {
+  margin: 10px 40px 18px;
+}

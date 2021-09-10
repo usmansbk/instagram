@@ -3,6 +3,7 @@ import Input from "../common/input";
 import Button from "../common/button";
 import Or from "../common/or";
 import classes from "./Login.module.css";
+import FacebookTextButton from "../common/button/facebook";
 
 const Login = () => {
   return (
@@ -20,6 +21,9 @@ const Login = () => {
                 <Button value="Log In" disabled />
               </div>
               <Or />
+              <div className={classes.oauth}>
+                <FacebookTextButton />
+              </div>
             </div>
           </form>
         </div>
