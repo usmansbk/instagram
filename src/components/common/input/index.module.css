@@ -8,8 +8,8 @@
   font-size: 14px;
 }
 
-.container--focused {
-  border: 1px solid #a0a0a0;
+.containerFocused {
+  border: 1px solid #8e8e8e;
   font-size: 12px;
 }
 
@@ -33,10 +33,11 @@
   transition: transform ease-out 0.1s;
   user-select: none;
   white-space: nowrap;
+  color: #8e8e8e;
 }
 
-.placeholder--animate {
-  transform: scale(0.83333) translate(-10px);
+.animatePlaceholder {
+  transform: scale(0.83333) translateY(-10px);
 }
 
 .input {
