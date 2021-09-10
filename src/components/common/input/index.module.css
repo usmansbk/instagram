@@ -15,3 +15,29 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.label {
+  display: flex;
+  flex: 1 0 0;
+  height: 36px;
+  position: relative;
+}
+
+.animate .placeholder {
+  transform: scale(0.83333) translate(-10px);
+}
+
+.placeholder {
+  font-size: 12px;
+  height: 36px;
+  left: 8px;
+  line-height: 36px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  transform-origin: left;
+  transition: transform ease-out 0.1s;
+  user-select: none;
+  white-space: nowrap;
+}
