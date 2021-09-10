@@ -1,6 +1,7 @@
 import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
+import Or from "../common/or";
 import classes from "./Login.module.css";
 
 const Login = () => {
@@ -18,6 +19,7 @@ const Login = () => {
               <div className={classes.button}>
                 <Button value="Log In" disabled />
               </div>
+              <Or />
             </div>
           </form>
         </div>
