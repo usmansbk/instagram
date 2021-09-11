@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Controller, useForm } from "react-hook-form";
 import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
@@ -9,13 +10,12 @@ import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
 
 const Signup = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const error = false;
+  const { control, handleSubmit, watch } = useForm();
   const [showPassword, setPasswordVisibility] = useState(false);
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
-  const onUsernameChange = (e) => setUsername(e.target.value);
-  const onPasswordChange = (e) => setPassword(e.target.value);
+  const onSubmit = handleSubmit((data) => console.log(data));
+  const password = watch("password");
+  const error = false;
 
   return (
     <div className={classes.container}>
@@ -23,7 +23,7 @@ const Signup = () => {
         <div className={classes.content}>
           <TextLogo />
           <div className={classes.body}>
-            <form className={classes.form}>
+            <form className={classes.form} onSubmit={onSubmit}>
               <h1 className={classes.title}>
                 Sign up to see photos and videos from your friends.
               </h1>
@@ -33,36 +33,57 @@ const Signup = () => {
                 </div>
                 <Or />
                 <div className={classes.inputs}>
-                  <Input placeholder="Mobile number or email address" />
-                  <Input placeholder="Full Name" />
-                  <Input
-                    placeholder="Username"
-                    value={username}
-                    onChange={onUsernameChange}
+                  <Controller
+                    name="userid"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input
+                        placeholder="Mobile number or email address"
+                        {...field}
+                      />
+                    )}
                   />
-                  <Input
-                    placeholder="Password"
-                    value={password}
-                    onChange={onPasswordChange}
-                    type={showPassword ? "text" : "password"}
-                    right={
-                      !!password && (
-                        <div className={classes.passwordVisibility}>
-                          <button
-                            type="button"
-                            onClick={togglePassword}
-                            className={classes.visibilityButton}
-                          >
-                            Show
-                          </button>
-                        </div>
-                      )
-                    }
+                  <Controller
+                    name="fullname"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input placeholder="Full Name" {...field} />
+                    )}
+                  />
+                  <Controller
+                    name="username"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input placeholder="Username" {...field} />
+                    )}
+                  />
+                  <Controller
+                    name="password"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input
+                        placeholder="Password"
+                        {...field}
+                        type={showPassword ? "text" : "password"}
+                        onClickRightButton={togglePassword}
+                        rightButtonLabel={
+                          !!password && (showPassword ? "Hide" : "Show")
+                        }
+                      />
+                    )}
                   />
                 </div>
               </div>
               <div className={classes.box}>
-                <Button value="Sign Up" disabled={!(username && password)} />
+                <Button value="Sign Up" />
               </div>
             </form>
             {error && (
