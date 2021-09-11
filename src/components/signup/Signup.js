@@ -61,16 +61,17 @@ const Signup = () => {
                 <Button value="Sign Up" disabled={!(username && password)} />
               </div>
             </form>
-            <a href="/forgot" className={classes.link}>
-              Forgotten your password?
-            </a>
+            <p href="/forgot" className={classes.link}>
+              By signing up, you agree to our Terms, Data Policy and Cookie
+              Policy.
+            </p>
           </div>
         </div>
         <div className={classes.signup}>
           <div className={classes.signupContent}>
             <p className={classes.signupText}>
               Have an account?{" "}
-              <Link className={classes.signupLink} href="/">
+              <Link className={classes.signupLink} to="/">
                 Log in
               </Link>
             </p>
