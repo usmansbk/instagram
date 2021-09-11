@@ -7,15 +7,25 @@ import Or from "../common/or";
 import classes from "./Login.module.css";
 import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
+import { Controller, useForm } from "react-hook-form";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const {
+    handleSubmit,
+    control,
+    watch,
+    formState: { errors },
+  } = useForm();
   const [showPassword, setPasswordVisibility] = useState(false);
-  const error = false;
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
-  const onUsernameChange = (e) => setUsername(e.target.value);
-  const onPasswordChange = (e) => setPassword(e.target.value);
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
+  const error = false;
+  console.log(error);
+
+  const password = watch("password");
 
   return (
     <div className={classes.container}>
@@ -23,25 +33,41 @@ const Login = () => {
         <div className={classes.content}>
           <TextLogo />
           <div className={classes.body}>
-            <form className={classes.form}>
+            <form className={classes.form} onSubmit={onSubmit}>
               <div className={classes.formContent}>
                 <div className={classes.inputs}>
-                  <Input
-                    placeholder="Phone number, username or email address"
-                    value={username}
-                    onChange={onUsernameChange}
+                  <Controller
+                    name="username"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input
+                        placeholder="Phone number, username or email address"
+                        error={!!errors.username}
+                        {...field}
+                      />
+                    )}
                   />
-                  <Input
-                    placeholder="Password"
-                    value={password}
-                    onChange={onPasswordChange}
-                    type={showPassword ? "text" : "password"}
-                    onClickRightButton={togglePassword}
-                    rightButtonLabel={!!password && "Show"}
+                  <Controller
+                    name="password"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input
+                        placeholder="Password"
+                        type={showPassword ? "text" : "password"}
+                        onClickRightButton={togglePassword}
+                        rightButtonLabel={!!password && "Show"}
+                        error={!!errors.password}
+                        {...field}
+                      />
+                    )}
                   />
                 </div>
                 <div className={classes.box}>
-                  <Button value="Log In" disabled={!(username && password)} />
+                  <Button value="Log In" type="submit" />
                 </div>
                 <Or />
                 <div className={classes.box}>

@@ -8,6 +8,7 @@ const Input = (props, ref) => {
     placeholder,
     value = "",
     onChange,
+    onBlur,
     type = "text",
     rightButtonLabel,
     onClickRightButton,
@@ -18,8 +19,16 @@ const Input = (props, ref) => {
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
 
-  const _onFocus = useCallback(() => setFocused(true), []);
-  const _onBlur = useCallback(() => setFocused(false), []);
+  const _onFocus = useCallback(() => {
+    setFocused(true);
+  }, []);
+  const _onBlur = useCallback(
+    (e) => {
+      setFocused(false);
+      onBlur(e);
+    },
+    [onBlur]
+  );
 
   return (
     <div
