@@ -49,12 +49,7 @@
   margin-bottom: 6px;
 }
 
-.button {
-  margin: 8px 40px;
-  display: flex;
-}
-
-.oauth {
+.box {
   margin: 8px 40px;
   display: flex;
 }
