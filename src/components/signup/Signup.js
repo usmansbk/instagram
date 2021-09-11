@@ -24,9 +24,15 @@ const Signup = () => {
           <div className={classes.body}>
             <form className={classes.form}>
               <div className={classes.formContent}>
+                <div className={classes.oauth}>
+                  <FacebookTextButton />
+                </div>
+                <Or />
                 <div className={classes.inputs}>
+                  <Input placeholder="Mobile number or email address" />
+                  <Input placeholder="Full Name" />
                   <Input
-                    placeholder="Phone number, username or email address"
+                    placeholder="Username"
                     value={username}
                     onChange={onUsernameChange}
                   />
@@ -50,13 +56,9 @@ const Signup = () => {
                     }
                   />
                 </div>
-                <div className={classes.button}>
-                  <Button value="Log In" disabled={!(username && password)} />
-                </div>
-                <Or />
-                <div className={classes.oauth}>
-                  <FacebookTextButton />
-                </div>
+              </div>
+              <div className={classes.button}>
+                <Button value="Sign Up" disabled={!(username && password)} />
               </div>
             </form>
             <a href="/forgot" className={classes.link}>
