@@ -1,4 +1,4 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useCallback, useState } from "react";
 import clsx from "clsx";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/outline";
 import classes from "./index.module.css";
@@ -18,6 +18,9 @@ const Input = (props, ref) => {
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
 
+  const _onFocus = useCallback(() => setFocused(true), []);
+  const _onBlur = useCallback(() => setFocused(false), []);
+
   return (
     <div
       className={clsx(classes.container, focused && classes.containerFocused)}
@@ -36,8 +39,8 @@ const Input = (props, ref) => {
           type={type}
           className={clsx(classes.input, hasValue && classes.inputFocus)}
           onChange={onChange}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
+          onFocus={_onFocus}
+          onBlur={_onBlur}
           value={value}
           {...rest}
         />
