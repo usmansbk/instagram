@@ -53,7 +53,7 @@ const Login = () => {
                     name="password"
                     control={control}
                     defaultValue=""
-                    rules={{ required: true }}
+                    rules={{ required: true, minLength: 8 }}
                     render={({ field }) => (
                       <Input
                         placeholder="Password"
