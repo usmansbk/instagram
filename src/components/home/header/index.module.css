@@ -23,3 +23,15 @@
   z-index: 10;
   transition: height 0.2s ease-in-out;
 }
+
+.left {
+  display: flex;
+  flex: 1 9999 0%;
+  min-width: 40px;
+}
+
+.navBrand {
+  display: flex;
+  margin-top: 7px;
+  transition: opacity 0.1s ease-out;
+}

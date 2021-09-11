@@ -104,7 +104,7 @@ const Signup = () => {
           <div className={classes.signupContent}>
             <p className={classes.signupText}>
               Have an account?{" "}
-              <Link className={classes.signupLink} to="/">
+              <Link className={classes.signupLink} to="/login">
                 Log in
               </Link>
             </p>
