@@ -12,6 +12,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setPasswordVisibility] = useState(false);
+  const error = false;
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
   const onUsernameChange = (e) => setUsername(e.target.value);
   const onPasswordChange = (e) => setPassword(e.target.value);
@@ -59,6 +60,14 @@ const Login = () => {
                 </div>
               </div>
             </form>
+            <div className={classes.box}>
+              {error && (
+                <p className={classes.error}>
+                  Sorry, your password was incorrect. Please double-check your
+                  password.
+                </p>
+              )}
+            </div>
             <Link to="/forgot" className={classes.link}>
               Forgotten your password?
             </Link>
