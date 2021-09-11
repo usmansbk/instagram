@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm, Controller } from "react-hook-form";
 import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
@@ -8,8 +8,8 @@ import classes from "./Forgot.module.css";
 import Footer from "../common/footer";
 
 const Forgot = () => {
-  const [username, setUsername] = useState("");
-  const onUsernameChange = (e) => setUsername(e.target.value);
+  const { control, handleSubmit } = useForm();
+  const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
     <div className={classes.container}>
@@ -24,17 +24,23 @@ const Forgot = () => {
                 send you a link to get back into your account.
               </p>
             </div>
-            <form className={classes.form}>
+            <form className={classes.form} onSubmit={onSubmit}>
               <div className={classes.formContent}>
                 <div className={classes.inputs}>
-                  <Input
-                    placeholder="Email address, phone number or username"
-                    value={username}
-                    onChange={onUsernameChange}
+                  <Controller
+                    name="userid"
+                    control={control}
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                      <Input
+                        placeholder="Email address, phone number or username"
+                        {...field}
+                      />
+                    )}
                   />
                 </div>
                 <div className={classes.button}>
-                  <Button value="Send Login Link" disabled={!username} />
+                  <Button value="Send Login Link" type="submit" />
                 </div>
                 <Or />
                 <div className={classes.box}>
