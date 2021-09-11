@@ -123,10 +123,6 @@
 }
 
 @media screen and (min-width: 480px) {
-  .container {
-    justify-content: center;
-  }
-
   .content,
   .signup {
     border: 1px solid #dbdbdb;

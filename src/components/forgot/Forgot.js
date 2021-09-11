@@ -5,7 +5,6 @@ import Input from "../common/input";
 import Button from "../common/button";
 import Or from "../common/or";
 import classes from "./Forgot.module.css";
-import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
 
 const Forgot = () => {
@@ -31,9 +30,7 @@ const Forgot = () => {
                   <Button value="Send Login Link" disabled={!username} />
                 </div>
                 <Or />
-                <div className={classes.oauth}>
-                  <FacebookTextButton />
-                </div>
+                <div></div>
               </div>
             </form>
           </div>
