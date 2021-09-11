@@ -1,0 +1,24 @@
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.textLogo {
+  background-position: 0 -130px;
+  height: 51px;
+  width: 175px;
+}
+
+.inputError {
+  background-position: -249px -333px;
+}
+
+.inputAccepted {
+  background-position: -225px -333px;
+}
+
+.facebookIcon {
+  background-position: -414px -259px;
+  width: 16px;
+  height: 16px;
+}

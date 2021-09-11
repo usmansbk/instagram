@@ -1,6 +1,6 @@
-import logo from "../../../assets/logo-text.png";
+import Icon from "../icon";
 import classes from "./index.module.css";
 
-const TextLogo = () => <img src={logo} alt="" className={classes.text} />;
+const TextLogo = () => <Icon name="textLogo" className={classes.text} />;
 
 export default TextLogo;
