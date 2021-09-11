@@ -83,7 +83,7 @@ const Signup = () => {
                 </div>
               </div>
               <div className={classes.box}>
-                <Button value="Sign Up" />
+                <Button value="Sign Up" type="submit" />
               </div>
             </form>
             {error && (
