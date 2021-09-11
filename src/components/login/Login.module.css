@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.main {
+  margin-bottom: 44px;
+}
+
 .content {
   background-color: white;
   border: 1px solid #dbdbdb;

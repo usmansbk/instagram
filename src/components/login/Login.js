@@ -4,11 +4,12 @@ import Button from "../common/button";
 import Or from "../common/or";
 import classes from "./Login.module.css";
 import FacebookTextButton from "../common/button/facebook";
+import Footer from "../common/footer";
 
 const Login = () => {
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes.main}>
         <div className={classes.content}>
           <TextLogo />
           <div className={classes.body}>
@@ -43,6 +44,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
