@@ -92,23 +92,6 @@
   color: #0095f6;
 }
 
-.passwordVisibility {
-  margin-left: 8px;
-  display: flex;
-  flex: 0 0 auto;
-}
-
-.visibilityButton {
-  color: #262626;
-  border: none;
-  background-color: transparent;
-  font-weight: 600;
-  user-select: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: center;
-}
-
 .error {
   color: #ed4956;
   text-align: center;

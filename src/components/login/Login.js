@@ -36,19 +36,8 @@ const Login = () => {
                     value={password}
                     onChange={onPasswordChange}
                     type={showPassword ? "text" : "password"}
-                    right={
-                      !!password && (
-                        <div className={classes.passwordVisibility}>
-                          <button
-                            type="button"
-                            onClick={togglePassword}
-                            className={classes.visibilityButton}
-                          >
-                            Show
-                          </button>
-                        </div>
-                      )
-                    }
+                    onClickRightButton={togglePassword}
+                    rightButtonLabel={!!password && "Show"}
                   />
                 </div>
                 <div className={classes.box}>

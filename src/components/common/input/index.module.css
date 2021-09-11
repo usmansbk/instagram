@@ -63,3 +63,31 @@
   flex: 0 0 auto;
   align-items: center;
 }
+
+.rightButtonWrapper {
+  margin-left: 8px;
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.textButton {
+  color: #262626;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  color: #8e8e8e;
+}
+
+.error {
+  color: #ed4956;
+}
