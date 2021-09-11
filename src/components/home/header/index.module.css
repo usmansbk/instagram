@@ -37,6 +37,7 @@
 }
 
 .center {
+  position: relative;
   height: 28px;
   display: flex;
   flex: 0 1 auto;
@@ -57,4 +58,39 @@
   height: 100%;
   box-sizing: border-box;
   line-height: 18px;
+}
+
+.searchButton {
+  background-color: #fafafa;
+  border: solid 1px #dbdbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: #8e8e8e;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  padding: 7px;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.searchPlaceholder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  left: -5px;
+}
+
+.searchPlaceholderText {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
