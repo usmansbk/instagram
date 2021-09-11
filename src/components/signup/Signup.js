@@ -23,6 +23,9 @@ const Signup = () => {
           <TextLogo />
           <div className={classes.body}>
             <form className={classes.form}>
+              <h1 className={classes.title}>
+                Sign up to see photos and videos from your friends.
+              </h1>
               <div className={classes.formContent}>
                 <div className={classes.oauth}>
                   <FacebookTextButton />
@@ -62,8 +65,9 @@ const Signup = () => {
               </div>
             </form>
             <p href="/forgot" className={classes.link}>
-              By signing up, you agree to our Terms, Data Policy and Cookie
-              Policy.
+              By signing up, you agree to our <a href="#terms">Terms</a>,{" "}
+              <a href="#data">Data Policy</a> and{" "}
+              <a href="#cookies">Cookie Policy</a>.
             </p>
           </div>
         </div>

@@ -24,10 +24,18 @@
 .body {
   max-width: 350px;
   width: 100%;
-  margin-top: 24px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  color: #8e8e8e;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 40px 10px;
+  text-align: center;
 }
 
 .form {
