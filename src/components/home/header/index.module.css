@@ -82,9 +82,10 @@
 }
 
 .searchPlaceholder {
+  background-color: green;
   display: flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   left: -5px;
 }
 
