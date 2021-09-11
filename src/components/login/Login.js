@@ -5,8 +5,12 @@ import Or from "../common/or";
 import classes from "./Login.module.css";
 import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
+import { useState } from "react";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className={classes.container}>
       <div className={classes.main}>
@@ -16,11 +20,20 @@ const Login = () => {
             <form className={classes.form}>
               <div className={classes.formContent}>
                 <div className={classes.inputs}>
-                  <Input placeholder="Phone number, username or email address" />
-                  <Input placeholder="Password" />
+                  <Input
+                    placeholder="Phone number, username or email address"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                  <Input
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    type="password"
+                  />
                 </div>
                 <div className={classes.button}>
-                  <Button value="Log In" disabled />
+                  <Button value="Log In" disabled={!(username && password)} />
                 </div>
                 <Or />
                 <div className={classes.oauth}>
