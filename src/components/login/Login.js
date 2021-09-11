@@ -11,6 +11,9 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setPasswordVisibility] = useState(false);
+  const togglePassword = () => setPasswordVisibility((mode) => !mode);
+  const onUsernameChange = (e) => setUsername(e.target.value);
+  const onPasswordChange = (e) => setPassword(e.target.value);
 
   return (
     <div className={classes.container}>
@@ -24,21 +27,19 @@ const Login = () => {
                   <Input
                     placeholder="Phone number, username or email address"
                     value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={onUsernameChange}
                   />
                   <Input
                     placeholder="Password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={onPasswordChange}
                     type={showPassword ? "text" : "password"}
                     right={
                       !!password && (
                         <div className={classes.passwordVisibility}>
                           <button
                             type="button"
-                            onClick={() =>
-                              setPasswordVisibility((mode) => !mode)
-                            }
+                            onClick={togglePassword}
                             className={classes.visibilityButton}
                           >
                             Show

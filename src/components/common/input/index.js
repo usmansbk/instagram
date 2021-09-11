@@ -4,27 +4,24 @@ import classes from "./index.module.css";
 
 const Input = ({ placeholder, value, onChange, type, right }) => {
   const [focused, setFocused] = useState(false);
-  const isFocused = !!value;
+  const hasValue = !!value;
 
   return (
     <div
-      className={clsx(
-        classes.container,
-        (focused || isFocused) && classes.containerFocused
-      )}
+      className={clsx(classes.container, focused && classes.containerFocused)}
     >
       <label className={classes.label}>
         <span
           className={clsx(
             classes.placeholder,
-            isFocused && classes.animatePlaceholder
+            hasValue && classes.animatePlaceholder
           )}
         >
           {placeholder}
         </span>
         <input
           type={type}
-          className={clsx(classes.input, isFocused && classes.inputFocus)}
+          className={clsx(classes.input, hasValue && classes.inputFocus)}
           onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
