@@ -78,6 +78,7 @@
 }
 
 .link {
+  width: 100%;
   color: #262626;
   user-select: none;
   font-weight: 600;
