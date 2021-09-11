@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+  height: 54px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  transition: height 0.2s ease-in-out;
+}

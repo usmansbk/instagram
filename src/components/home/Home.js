@@ -1,5 +1,12 @@
+import Header from "./header";
+import classes from "./Home.module.css";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <div className={classes.container}>
+      <Header />
+    </div>
+  );
 };
 
 export default Home;
