@@ -11,7 +11,7 @@
 
 .content {
   margin: 0 0 10px;
-  padding: 10px 0;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 12px;
@@ -77,13 +77,26 @@
   margin: -3px 0 -4px;
 }
 
-.newAccount {
+.link {
   color: #262626;
   user-select: none;
   font-weight: 600;
   text-align: center;
   box-sizing: border-box;
   font-size: 14px;
+}
+
+.bottom {
+  margin-top: 68px;
+}
+
+.bottomLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  background-color: #fafafa;
+  border-top: 1px solid #dbdbdb;
 }
 
 @media screen and (min-width: 480px) {

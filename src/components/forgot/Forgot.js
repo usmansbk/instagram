@@ -38,12 +38,19 @@ const Forgot = () => {
                 </div>
                 <Or />
                 <div className={classes.box}>
-                  <Link to="/" className={classes.newAccount}>
+                  <Link to="/signup" className={classes.link}>
                     Create New Account
                   </Link>
                 </div>
               </div>
             </form>
+          </div>
+          <div className={classes.bottom}>
+            <div className={classes.bottomLink}>
+              <Link to="/" className={classes.link}>
+                Back to Login
+              </Link>
+            </div>
           </div>
         </div>
       </div>
