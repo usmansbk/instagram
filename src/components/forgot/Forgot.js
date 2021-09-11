@@ -17,7 +17,7 @@ const Forgot = () => {
         <div className={classes.content}>
           <TextLogo />
           <div className={classes.body}>
-            <div className={classes.header}>
+            <div className={classes.box}>
               <h4 className={classes.title}>Trouble with logging in?</h4>
               <p className={classes.instruction}>
                 Enter your email address, phone number or username, and we'll
@@ -37,7 +37,11 @@ const Forgot = () => {
                   <Button value="Send Login Link" disabled={!username} />
                 </div>
                 <Or />
-                <div></div>
+                <div className={classes.box}>
+                  <Link to="/" className={classes.newAccount}>
+                    Create New Account
+                  </Link>
+                </div>
               </div>
             </form>
           </div>

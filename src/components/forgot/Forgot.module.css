@@ -54,7 +54,7 @@
   display: flex;
 }
 
-.header {
+.box {
   margin: 0 44px 16px 44px;
   text-align: center;
   display: flex;
@@ -75,6 +75,15 @@
   color: #8e8e8e;
   font-weight: 400;
   margin: -3px 0 -4px;
+}
+
+.newAccount {
+  color: #262626;
+  user-select: none;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 480px) {
