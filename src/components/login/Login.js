@@ -31,8 +31,10 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     right={
-                      <div>
-                        <button>Show</button>
+                      <div className={classes.passwordVisibility}>
+                        <button className={classes.visibilityButton}>
+                          Show
+                        </button>
                       </div>
                     }
                   />
