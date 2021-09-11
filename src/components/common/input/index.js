@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import clsx from "clsx";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/outline";
 import classes from "./index.module.css";
 
-const Input = ({
-  placeholder,
-  value = "",
-  onChange,
-  type = "text",
-  rightButtonLabel,
-  onClickRightButton,
-  valid,
-  error,
-}) => {
+const Input = (props, ref) => {
+  const {
+    placeholder,
+    value = "",
+    onChange,
+    type = "text",
+    rightButtonLabel,
+    onClickRightButton,
+    valid,
+    error,
+    ...rest
+  } = props;
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
 
@@ -30,12 +32,14 @@ const Input = ({
           {placeholder}
         </span>
         <input
+          ref={ref}
           type={type}
           className={clsx(classes.input, hasValue && classes.inputFocus)}
           onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           value={value}
+          {...rest}
         />
       </label>
       <div className={classes.right}>
@@ -57,4 +61,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default forwardRef(Input);
