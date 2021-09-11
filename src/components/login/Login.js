@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
 import Or from "../common/or";
@@ -7,7 +8,6 @@ import classes from "./Login.module.css";
 import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
 import { Controller, useForm } from "react-hook-form";
-import Icon from "../common/icon";
 
 const Login = () => {
   const { handleSubmit, control, watch } = useForm();
@@ -25,7 +25,7 @@ const Login = () => {
     <div className={classes.container}>
       <div className={classes.main}>
         <div className={classes.content}>
-          <Icon name="textLogo" />
+          <TextLogo />
           <div className={classes.body}>
             <form className={classes.form} onSubmit={onSubmit}>
               <div className={classes.formContent}>
