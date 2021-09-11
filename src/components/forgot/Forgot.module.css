@@ -11,7 +11,7 @@
 
 .content {
   margin: 0 0 10px;
-  margin-top: 10px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 12px;
