@@ -50,11 +50,11 @@ const Login = () => {
                     }
                   />
                 </div>
-                <div className={classes.button}>
+                <div className={classes.box}>
                   <Button value="Log In" disabled={!(username && password)} />
                 </div>
                 <Or />
-                <div className={classes.oauth}>
+                <div className={classes.box}>
                   <FacebookTextButton />
                 </div>
               </div>

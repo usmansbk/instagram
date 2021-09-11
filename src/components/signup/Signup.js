@@ -27,7 +27,7 @@ const Signup = () => {
                 Sign up to see photos and videos from your friends.
               </h1>
               <div className={classes.formContent}>
-                <div className={classes.oauth}>
+                <div className={classes.box}>
                   <FacebookTextButton />
                 </div>
                 <Or />
@@ -60,7 +60,7 @@ const Signup = () => {
                   />
                 </div>
               </div>
-              <div className={classes.button}>
+              <div className={classes.box}>
                 <Button value="Sign Up" disabled={!(username && password)} />
               </div>
             </form>
