@@ -1,5 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/outline";
 import classes from "./index.module.css";
 
 const Input = ({
@@ -9,6 +10,8 @@ const Input = ({
   type = "text",
   rightButtonLabel,
   onClickRightButton,
+  valid,
+  error,
 }) => {
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
@@ -36,6 +39,8 @@ const Input = ({
         />
       </label>
       <div className={classes.right}>
+        {error && <XCircleIcon className={clsx(classes.icon, classes.error)} />}
+        {valid && <CheckCircleIcon className={classes.icon} />}
         {rightButtonLabel && (
           <div className={classes.textButtonWrapper}>
             <button

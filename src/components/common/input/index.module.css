@@ -80,3 +80,14 @@
   cursor: pointer;
   text-align: center;
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  color: #8e8e8e;
+}
+
+.error {
+  color: #ed4956;
+}
