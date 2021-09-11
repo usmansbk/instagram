@@ -2,7 +2,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import classes from "./index.module.css";
 
-const Input = ({ placeholder, value, onChange, type = "text", right }) => {
+const Input = ({ placeholder, value = "", onChange, type = "text", right }) => {
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
 

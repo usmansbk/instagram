@@ -11,7 +11,7 @@
 
 .content {
   margin: 0 0 10px;
-  padding: 10px 0;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 12px;
@@ -24,18 +24,10 @@
 .body {
   max-width: 350px;
   width: 100%;
+  margin-top: 24px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-}
-
-.title {
-  color: #8e8e8e;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 0 40px 10px;
-  text-align: center;
 }
 
 .form {
@@ -62,69 +54,53 @@
   display: flex;
 }
 
-.oauth {
-  margin: 8px 40px;
+.box {
+  margin: 0 44px 16px 44px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: #262626;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: -6px 0 -6px;
+}
+
+.instruction {
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 400;
+  margin: -3px 0 -4px;
 }
 
 .link {
-  color: #8e8e8e;
-  font-size: 12px;
-  line-height: 16px;
+  color: #262626;
+  user-select: none;
+  font-weight: 600;
   text-align: center;
-  text-decoration: none;
-  margin: 10px 40px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
-.signup {
+.bottom {
+  margin-top: 68px;
+}
+
+.bottomLink {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1px;
-  margin: 0 0 10px;
-  padding: 10px 0;
-}
-
-.signupContent {
-  color: #8e8e8e;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  margin: -3px 0 -4px;
-  display: flex;
-  box-sizing: border-box;
-}
-
-.signupText {
-  color: #262626;
-  margin: 15px;
-  text-align: center;
-}
-
-.signupLink {
-  color: #0095f6;
-}
-
-.passwordVisibility {
-  margin-left: 8px;
-  display: flex;
-  flex: 0 0 auto;
-}
-
-.visibilityButton {
-  color: #262626;
-  border: none;
-  background-color: transparent;
-  font-weight: 600;
-  user-select: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: center;
+  height: 44px;
+  background-color: #fafafa;
+  border-top: 1px solid #dbdbdb;
 }
 
 @media screen and (min-width: 480px) {
-  .content,
-  .signup {
+  .content {
     border: 1px solid #dbdbdb;
     background-color: white;
   }
