@@ -2,7 +2,14 @@ import { useState } from "react";
 import clsx from "clsx";
 import classes from "./index.module.css";
 
-const Input = ({ placeholder, value = "", onChange, type = "text", right }) => {
+const Input = ({
+  placeholder,
+  value = "",
+  onChange,
+  type = "text",
+  rightButtonLabel,
+  onClickRightButton,
+}) => {
   const [focused, setFocused] = useState(false);
   const hasValue = !!value;
 
@@ -28,7 +35,19 @@ const Input = ({ placeholder, value = "", onChange, type = "text", right }) => {
           value={value}
         />
       </label>
-      <div className={classes.right}>{right}</div>
+      <div className={classes.right}>
+        {rightButtonLabel && (
+          <div className={classes.textButtonWrapper}>
+            <button
+              type="button"
+              onClick={onClickRightButton}
+              className={classes.textButton}
+            >
+              {rightButtonLabel}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
