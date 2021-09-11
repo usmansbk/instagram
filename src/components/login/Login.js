@@ -10,12 +10,7 @@ import Footer from "../common/footer";
 import { Controller, useForm } from "react-hook-form";
 
 const Login = () => {
-  const {
-    handleSubmit,
-    control,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { handleSubmit, control, watch } = useForm();
   const [showPassword, setPasswordVisibility] = useState(false);
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
   const onSubmit = handleSubmit((data) => {
@@ -23,7 +18,6 @@ const Login = () => {
   });
 
   const error = false;
-  console.log(error);
 
   const password = watch("password");
 
@@ -44,7 +38,6 @@ const Login = () => {
                     render={({ field }) => (
                       <Input
                         placeholder="Phone number, username or email address"
-                        error={!!errors.username}
                         {...field}
                       />
                     )}
@@ -59,8 +52,9 @@ const Login = () => {
                         placeholder="Password"
                         type={showPassword ? "text" : "password"}
                         onClickRightButton={togglePassword}
-                        rightButtonLabel={!!password && "Show"}
-                        error={!!errors.password}
+                        rightButtonLabel={
+                          !!password && (showPassword ? "Hide" : "Show")
+                        }
                         {...field}
                       />
                     )}

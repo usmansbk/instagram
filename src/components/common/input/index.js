@@ -25,7 +25,7 @@ const Input = (props, ref) => {
   const _onBlur = useCallback(
     (e) => {
       setFocused(false);
-      onBlur(e);
+      onBlur?.(e);
     },
     [onBlur]
   );
