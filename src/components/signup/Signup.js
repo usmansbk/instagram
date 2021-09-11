@@ -4,11 +4,11 @@ import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
 import Or from "../common/or";
-import classes from "./Login.module.css";
+import classes from "./Signup.module.css";
 import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
 
-const Login = () => {
+const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setPasswordVisibility] = useState(false);
@@ -23,10 +23,19 @@ const Login = () => {
           <TextLogo />
           <div className={classes.body}>
             <form className={classes.form}>
+              <h1 className={classes.title}>
+                Sign up to see photos and videos from your friends.
+              </h1>
               <div className={classes.formContent}>
+                <div className={classes.oauth}>
+                  <FacebookTextButton />
+                </div>
+                <Or />
                 <div className={classes.inputs}>
+                  <Input placeholder="Mobile number or email address" />
+                  <Input placeholder="Full Name" />
                   <Input
-                    placeholder="Phone number, username or email address"
+                    placeholder="Username"
                     value={username}
                     onChange={onUsernameChange}
                   />
@@ -50,26 +59,24 @@ const Login = () => {
                     }
                   />
                 </div>
-                <div className={classes.button}>
-                  <Button value="Log In" disabled={!(username && password)} />
-                </div>
-                <Or />
-                <div className={classes.oauth}>
-                  <FacebookTextButton />
-                </div>
+              </div>
+              <div className={classes.button}>
+                <Button value="Sign Up" disabled={!(username && password)} />
               </div>
             </form>
-            <Link to="/forgot" className={classes.link}>
-              Forgotten your password?
-            </Link>
+            <p href="/forgot" className={classes.link}>
+              By signing up, you agree to our <a href="#terms">Terms</a>,{" "}
+              <a href="#data">Data Policy</a> and{" "}
+              <a href="#cookies">Cookie Policy</a>.
+            </p>
           </div>
         </div>
         <div className={classes.signup}>
           <div className={classes.signupContent}>
             <p className={classes.signupText}>
-              Don't have an account?{" "}
-              <Link className={classes.signupLink} to="/signup">
-                Sign up
+              Have an account?{" "}
+              <Link className={classes.signupLink} to="/">
+                Log in
               </Link>
             </p>
           </div>
@@ -80,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
