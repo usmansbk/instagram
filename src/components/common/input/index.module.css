@@ -57,6 +57,9 @@
 }
 
 .right {
-  height: 100%;
+  min-height: 100%;
   padding-right: 8px;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
 }

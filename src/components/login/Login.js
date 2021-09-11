@@ -30,6 +30,11 @@ const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
+                    right={
+                      <div>
+                        <button>Show</button>
+                      </div>
+                    }
                   />
                 </div>
                 <div className={classes.button}>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import classes from "./index.module.css";
 
-const Input = ({ placeholder, value, onChange, type }) => {
+const Input = ({ placeholder, value, onChange, type, right }) => {
   const [focused, setFocused] = useState(false);
   const isFocused = !!value;
 
@@ -31,7 +31,7 @@ const Input = ({ placeholder, value, onChange, type }) => {
           value={value}
         />
       </label>
-      <div className={classes.right} />
+      <div className={classes.right}>{right}</div>
     </div>
   );
 };
