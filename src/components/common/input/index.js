@@ -2,9 +2,8 @@ import { useState } from "react";
 import clsx from "clsx";
 import classes from "./index.module.css";
 
-const Input = ({ placeholder }) => {
+const Input = ({ placeholder, value, onChange }) => {
   const [focused, setFocused] = useState(false);
-  const [value, setValue] = useState("");
   const isFocused = !!value;
 
   return (
@@ -25,7 +24,7 @@ const Input = ({ placeholder }) => {
         </span>
         <input
           className={clsx(classes.input, isFocused && classes.inputFocus)}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           value={value}
