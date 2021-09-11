@@ -39,6 +39,8 @@ const Login = () => {
                       <Input
                         placeholder="Phone number, username or email address"
                         {...field}
+                        valid
+                        error
                       />
                     )}
                   />
