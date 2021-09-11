@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Icon from "../../common/icon";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -16,6 +17,12 @@ const SearchInput = () => {
   return (
     <div className={classes.center}>
       <input className={classes.searchInput} placeholder="Search" />
+      <div className={classes.searchButton}>
+        <div className={classes.searchIconText}>
+          <Icon name="searchIcon" />
+          <span className={classes.searchText}>Search</span>
+        </div>
+      </div>
     </div>
   );
 };
