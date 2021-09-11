@@ -1,0 +1,18 @@
+.footer {
+  background-color: #fafafa;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container {
+  margin-bottom: 52px;
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.text {
+  color: #8e8e8e;
+  font-weight: 400;
+  font-size: 12px;
+  margin: -2px 0 -3px;
+}

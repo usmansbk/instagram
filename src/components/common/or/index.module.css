@@ -1,0 +1,21 @@
+.container {
+  margin: 10px 40px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  display: flex;
+  height: 1px;
+  flex-grow: 1;
+  background-color: #dbdbdb;
+}
+
+.text {
+  color: #8e8e8e;
+  margin: 0 18px;
+  line-height: 15px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+}
