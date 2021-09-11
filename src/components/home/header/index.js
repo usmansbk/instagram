@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../../common/icon";
 import classes from "./index.module.css";
@@ -14,15 +15,23 @@ const Logo = () => (
 );
 
 const SearchInput = () => {
+  const [focused, setFocused] = useState(false);
   return (
     <div className={classes.center}>
-      <input className={classes.searchInput} placeholder="Search" />
-      <div className={classes.searchButton}>
-        <div className={classes.searchPlaceholder}>
-          <Icon name="searchIcon" />
-          <span className={classes.searchPlaceholderText}>Search</span>
+      <input
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        className={classes.searchInput}
+        placeholder="Search"
+      />
+      {!focused && (
+        <div className={classes.searchButton}>
+          <div className={classes.searchPlaceholder}>
+            <Icon name="searchIcon" />
+            <span className={classes.searchPlaceholderText}>Search</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
