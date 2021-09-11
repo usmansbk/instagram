@@ -77,3 +77,24 @@
   margin: 0 0 10px;
   padding: 10px 0;
 }
+
+.signupContent {
+  color: #8e8e8e;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin: -3px 0 -4px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.signupText {
+  color: #262626;
+  margin: 15px;
+  text-align: center;
+}
+
+.signupLink {
+  color: #0095f6;
+  font-weight: 600;
+}
