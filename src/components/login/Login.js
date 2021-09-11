@@ -10,6 +10,7 @@ import { useState } from "react";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setPasswordVisibility] = useState(false);
 
   return (
     <div className={classes.container}>
@@ -29,13 +30,21 @@ const Login = () => {
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     right={
-                      <div className={classes.passwordVisibility}>
-                        <button className={classes.visibilityButton}>
-                          Show
-                        </button>
-                      </div>
+                      !!password && (
+                        <div className={classes.passwordVisibility}>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setPasswordVisibility((mode) => !mode)
+                            }
+                            className={classes.visibilityButton}
+                          >
+                            Show
+                          </button>
+                        </div>
+                      )
                     }
                   />
                 </div>
