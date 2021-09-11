@@ -6,8 +6,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/" component={Signup} />
+        <Route path="/" component={Login} />
+        <Route path="/signup" component={Signup} />
       </Switch>
     </Router>
   );

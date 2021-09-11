@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
@@ -5,7 +7,6 @@ import Or from "../common/or";
 import classes from "./Login.module.css";
 import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
-import { useState } from "react";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -58,18 +59,18 @@ const Login = () => {
                 </div>
               </div>
             </form>
-            <a href="/forgot" className={classes.link}>
+            <Link to="/forgot" className={classes.link}>
               Forgotten your password?
-            </a>
+            </Link>
           </div>
         </div>
         <div className={classes.signup}>
           <div className={classes.signupContent}>
             <p className={classes.signupText}>
               Don't have an account?{" "}
-              <a className={classes.signupLink} href="/signup">
+              <Link className={classes.signupLink} to="/signup">
                 Sign up
-              </a>
+              </Link>
             </p>
           </div>
         </div>
