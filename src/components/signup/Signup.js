@@ -64,6 +64,11 @@ const Signup = () => {
                 <Button value="Sign Up" disabled={!(username && password)} />
               </div>
             </form>
+            <div className={classes.box}>
+              <p className={classes.error}>
+                This username isn't available. Please try another.
+              </p>
+            </div>
             <p href="/forgot" className={classes.link}>
               By signing up, you agree to our <a href="#terms">Terms</a>,{" "}
               <a href="#data">Data Policy</a> and{" "}

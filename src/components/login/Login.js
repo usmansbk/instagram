@@ -59,6 +59,12 @@ const Login = () => {
                 </div>
               </div>
             </form>
+            <div className={classes.box}>
+              <p className={classes.error}>
+                Sorry, your password was incorrect. Please double-check your
+                password.
+              </p>
+            </div>
             <Link to="/forgot" className={classes.link}>
               Forgotten your password?
             </Link>
