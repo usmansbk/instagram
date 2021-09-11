@@ -17,6 +17,13 @@ const Forgot = () => {
         <div className={classes.content}>
           <TextLogo />
           <div className={classes.body}>
+            <div className={classes.header}>
+              <h4 className={classes.title}>Trouble with logging in?</h4>
+              <p className={classes.instruction}>
+                Enter your email address, phone number or username, and we'll
+                send you a link to get back into your account.
+              </p>
+            </div>
             <form className={classes.form}>
               <div className={classes.formContent}>
                 <div className={classes.inputs}>

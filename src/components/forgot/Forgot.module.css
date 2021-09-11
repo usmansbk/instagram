@@ -54,9 +54,30 @@
   display: flex;
 }
 
+.header {
+  margin: 0 44px 16px 44px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: #262626;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: -6px 0 -6px;
+}
+
+.instruction {
+  color: #8e8e8e;
+  font-weight: 400;
+  margin: -3px 0 -4px;
+}
+
 @media screen and (min-width: 480px) {
-  .content,
-  .signup {
+  .content {
     border: 1px solid #dbdbdb;
     background-color: white;
   }
