@@ -1,6 +1,6 @@
 import { forwardRef, useCallback, useState } from "react";
 import clsx from "clsx";
-import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/outline";
+import Icon from "../icon";
 import classes from "./index.module.css";
 
 const Input = (props, ref) => {
@@ -55,8 +55,8 @@ const Input = (props, ref) => {
         />
       </label>
       <div className={classes.right}>
-        {error && <XCircleIcon className={clsx(classes.icon, classes.error)} />}
-        {valid && <CheckCircleIcon className={classes.icon} />}
+        {error && <Icon name="inputError" className={classes.icon} />}
+        {valid && <Icon name="inputAccepted" className={classes.icon} />}
         {rightButtonLabel && (
           <div className={classes.textButtonWrapper}>
             <button

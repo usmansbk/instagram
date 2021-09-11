@@ -3,3 +3,15 @@
   height: 51px;
   width: 175px;
 }
+
+.inputError {
+  background-position: -249px -333px;
+  height: 22px;
+  width: 22px;
+}
+
+.inputAccepted {
+  background-position: -225px -333px;
+  height: 22px;
+  width: 22px;
+}
