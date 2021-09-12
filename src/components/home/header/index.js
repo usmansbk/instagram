@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
 import classes from "./index.module.css";
 import logo from "./logo.png";
@@ -58,13 +58,22 @@ const Nav = () => {
     <div className={classes.nav}>
       <ul className={classes.navLinks}>
         <li>
-          <HomeSolid />
-        </li>
-        <li>
-          <HomeOutline />
+          <IconNavLink
+            to="/"
+            activeComponent={<HomeSolid />}
+            inActiveComponent={<HomeOutline />}
+          />
         </li>
       </ul>
     </div>
+  );
+};
+
+const IconNavLink = ({ to, activeComponent, inActiveComponent }) => {
+  const { pathname } = useLocation();
+  const isActive = pathname === to;
+  return (
+    <NavLink to={to}>{isActive ? activeComponent : inActiveComponent}</NavLink>
   );
 };
 
