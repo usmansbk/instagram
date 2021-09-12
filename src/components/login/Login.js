@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import TextLogo from "../common/logo";
 import Input from "../common/input";
 import Button from "../common/button";
@@ -10,11 +10,12 @@ import Footer from "../common/footer";
 import { Controller, useForm } from "react-hook-form";
 
 const Login = () => {
+  const history = useHistory();
   const { handleSubmit, control, watch } = useForm();
   const [showPassword, setPasswordVisibility] = useState(false);
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
+  const onSubmit = handleSubmit(() => {
+    history.push("/i");
   });
 
   const error = false;

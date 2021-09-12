@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+  height: 54px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  transition: height 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  max-width: 975px;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 10;
+  transition: height 0.2s ease-in-out;
+}
+
+.left {
+  display: flex;
+  flex: 1 9999 0%;
+  min-width: 40px;
+}
+
+.navBrand {
+  display: flex;
+  margin-top: 7px;
+  transition: opacity 0.1s ease-out;
+}
+
+.center {
+  position: relative;
+  height: 28px;
+  display: none;
+  flex: 0 1 auto;
+  min-width: 125px;
+  width: 215px;
+}
+
+.searchInput {
+  font-size: 14px;
+  background-color: #fafafa;
+  border-radius: 3px;
+  border: solid 1px #dbdbdb;
+  color: #262626;
+  z-index: 2;
+  padding: 3px 10px 3px 26px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 18px;
+}
+
+.searchButton {
+  background-color: #fafafa;
+  border: solid 1px #dbdbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: #8e8e8e;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  padding: 7px;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  pointer-events: none;
+}
+
+.searchPlaceholder {
+  flex-grow: 1;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  left: -5px;
+}
+
+.searchPlaceholderText {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clearButton {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  z-index: 3;
+}
+
+.nav {
+  display: flex;
+  flex: 1 0 0%;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navLinks {
+  display: flex;
+  padding-left: 24px;
+  white-space: nowrap;
+  gap: 22px;
+}
+
+.navButton {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .center {
+    display: flex;
+  }
+}

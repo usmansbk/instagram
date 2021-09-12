@@ -28,3 +28,7 @@ textarea {
   flex-grow: 1;
   background-color: #fafafa;
 }
+
+ul {
+  list-style-type: none;
+}

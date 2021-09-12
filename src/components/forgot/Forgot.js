@@ -53,7 +53,7 @@ const Forgot = () => {
           </div>
           <div className={classes.bottom}>
             <div className={classes.bottomLink}>
-              <Link to="/" className={classes.link}>
+              <Link to="/login" className={classes.link}>
                 Back to Login
               </Link>
             </div>
