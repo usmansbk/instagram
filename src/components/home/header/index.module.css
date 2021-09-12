@@ -120,4 +120,5 @@
   display: flex;
   padding-left: 24px;
   white-space: nowrap;
+  gap: 22px;
 }

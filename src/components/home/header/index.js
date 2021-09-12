@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
+import Icon, {
+  HomeSolid,
+  HomeOutline,
+  MessengerSolid,
+  MessengerOutline,
+  HeartSolid,
+  HeartOutline,
+  ExploreSolid,
+  ExploreOutline,
+} from "../../common/icon";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -62,6 +71,27 @@ const Nav = () => {
             to="/"
             activeComponent={<HomeSolid />}
             inActiveComponent={<HomeOutline />}
+          />
+        </li>
+        <li>
+          <IconNavLink
+            to="/direct"
+            activeComponent={<MessengerSolid />}
+            inActiveComponent={<MessengerOutline />}
+          />
+        </li>
+        <li>
+          <IconNavLink
+            to="/explore"
+            activeComponent={<ExploreSolid />}
+            inActiveComponent={<ExploreOutline />}
+          />
+        </li>
+        <li>
+          <IconNavLink
+            to="/likes"
+            activeComponent={<HeartSolid />}
+            inActiveComponent={<HeartOutline />}
           />
         </li>
       </ul>
