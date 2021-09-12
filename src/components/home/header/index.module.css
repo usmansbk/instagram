@@ -106,3 +106,18 @@
   top: 4px;
   z-index: 3;
 }
+
+.nav {
+  display: flex;
+  flex: 1 0 0%;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navLinks {
+  display: flex;
+  padding-left: 24px;
+  white-space: nowrap;
+}

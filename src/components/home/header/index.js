@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon from "../../common/icon";
+import Icon, { Home } from "../../common/icon";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -53,12 +53,25 @@ const SearchInput = () => {
   );
 };
 
+const Nav = () => {
+  return (
+    <div className={classes.nav}>
+      <ul className={classes.navLinks}>
+        <li>
+          <Home />
+        </li>
+      </ul>
+    </div>
+  );
+};
+
 const Header = () => {
   return (
     <header className={classes.container}>
       <div className={classes.content}>
         <Logo />
         <SearchInput />
+        <Nav />
       </div>
     </header>
   );
