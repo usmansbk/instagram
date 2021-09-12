@@ -10,6 +10,7 @@ import Icon, {
   ExploreSolid,
   ExploreOutline,
 } from "../../common/icon";
+import AccountIcon from "./Account";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -93,6 +94,9 @@ const Nav = () => {
             activeComponent={<HeartSolid />}
             inActiveComponent={<HeartOutline />}
           />
+        </li>
+        <li>
+          <AccountIcon />
         </li>
       </ul>
     </div>
