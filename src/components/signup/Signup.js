@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 import TextLogo from "../common/logo";
 import Input from "../common/input";
@@ -10,10 +10,11 @@ import FacebookTextButton from "../common/button/facebook";
 import Footer from "../common/footer";
 
 const Signup = () => {
+  const history = useHistory();
   const { control, handleSubmit, watch } = useForm();
   const [showPassword, setPasswordVisibility] = useState(false);
   const togglePassword = () => setPasswordVisibility((mode) => !mode);
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit(() => history.push("/i"));
   const password = watch("password");
   const error = false;
 

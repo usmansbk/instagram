@@ -70,31 +70,43 @@ const Nav = () => {
     <div className={classes.nav}>
       <ul className={classes.navLinks}>
         <li>
-          <Link to="/" onClick={() => setActiveIndex(0)}>
+          <div
+            className={classes.navButton}
+            to="/"
+            onClick={() => setActiveIndex(0)}
+          >
             <NavIcon
               isActive={activeIndex === 0}
               activeComponent={<HomeSolid />}
               inActiveComponent={<HomeOutline />}
             />
-          </Link>
+          </div>
         </li>
         <li>
-          <Link to="/direct" onClick={() => setActiveIndex(1)}>
+          <div
+            className={classes.navButton}
+            to="/direct"
+            onClick={() => setActiveIndex(1)}
+          >
             <NavIcon
               isActive={activeIndex === 1}
               activeComponent={<MessengerSolid />}
               inActiveComponent={<MessengerOutline />}
             />
-          </Link>
+          </div>
         </li>
         <li>
-          <Link to="/explore" onClick={() => setActiveIndex(2)}>
+          <div
+            className={classes.navButton}
+            to="/explore"
+            onClick={() => setActiveIndex(2)}
+          >
             <NavIcon
               isActive={activeIndex === 2}
               activeComponent={<ExploreSolid />}
               inActiveComponent={<ExploreOutline />}
             />
-          </Link>
+          </div>
         </li>
         <li>
           <div className={classes.navButton} onClick={() => setActiveIndex(3)}>
@@ -106,9 +118,13 @@ const Nav = () => {
           </div>
         </li>
         <li>
-          <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
+          <Link
+            to="/login"
+            className={classes.navButton}
+            onClick={() => setActiveIndex(4)}
+          >
             <AccountIcon isActive={activeIndex === 4} />
-          </div>
+          </Link>
         </li>
       </ul>
     </div>
