@@ -122,3 +122,7 @@
   white-space: nowrap;
   gap: 22px;
 }
+
+.navButton {
+  cursor: pointer;
+}

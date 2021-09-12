@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Icon, {
   HomeSolid,
   HomeOutline,
@@ -64,51 +64,59 @@ const SearchInput = () => {
 };
 
 const Nav = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div className={classes.nav}>
       <ul className={classes.navLinks}>
         <li>
-          <IconNavLink
-            to="/"
-            activeComponent={<HomeSolid />}
-            inActiveComponent={<HomeOutline />}
-          />
+          <Link to="/" onClick={() => setActiveIndex(0)}>
+            <NavIcon
+              isActive={activeIndex === 0}
+              activeComponent={<HomeSolid />}
+              inActiveComponent={<HomeOutline />}
+            />
+          </Link>
         </li>
         <li>
-          <IconNavLink
-            to="/direct"
-            activeComponent={<MessengerSolid />}
-            inActiveComponent={<MessengerOutline />}
-          />
+          <Link to="/direct" onClick={() => setActiveIndex(1)}>
+            <NavIcon
+              isActive={activeIndex === 1}
+              activeComponent={<MessengerSolid />}
+              inActiveComponent={<MessengerOutline />}
+            />
+          </Link>
         </li>
         <li>
-          <IconNavLink
-            to="/explore"
-            activeComponent={<ExploreSolid />}
-            inActiveComponent={<ExploreOutline />}
-          />
+          <Link to="/explore" onClick={() => setActiveIndex(2)}>
+            <NavIcon
+              isActive={activeIndex === 2}
+              activeComponent={<ExploreSolid />}
+              inActiveComponent={<ExploreOutline />}
+            />
+          </Link>
         </li>
         <li>
-          <IconNavLink
-            to="/likes"
-            activeComponent={<HeartSolid />}
-            inActiveComponent={<HeartOutline />}
-          />
+          <div className={classes.navButton} onClick={() => setActiveIndex(3)}>
+            <NavIcon
+              isActive={activeIndex === 3}
+              activeComponent={<HeartSolid />}
+              inActiveComponent={<HeartOutline />}
+            />
+          </div>
         </li>
         <li>
-          <AccountIcon />
+          <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
+            <AccountIcon isActive={activeIndex === 4} />
+          </div>
         </li>
       </ul>
     </div>
   );
 };
 
-const IconNavLink = ({ to, activeComponent, inActiveComponent }) => {
-  const { pathname } = useLocation();
-  const isActive = pathname === to;
-  return (
-    <NavLink to={to}>{isActive ? activeComponent : inActiveComponent}</NavLink>
-  );
+const NavIcon = ({ activeComponent, inActiveComponent, isActive }) => {
+  return isActive ? activeComponent : inActiveComponent;
 };
 
 const Header = () => {

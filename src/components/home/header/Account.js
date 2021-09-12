@@ -1,9 +1,9 @@
 import classes from "./Account.module.css";
 
-const AccountIcon = () => {
+const AccountIcon = ({ isActive }) => {
   return (
     <div className={classes.container}>
-      <div className={classes.border} />
+      {isActive && <div className={classes.border} />}
       <div className={classes.frame}>
         <img
           src={"https://i.pravatar.cc/300"}
