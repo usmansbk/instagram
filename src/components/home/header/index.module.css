@@ -97,3 +97,12 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.clearButton {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  z-index: 3;
+}

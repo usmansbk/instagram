@@ -16,14 +16,22 @@ const Logo = () => (
 
 const SearchInput = () => {
   const [focused, setFocused] = useState(false);
+  const _onFocus = () => setFocused(true);
+  const _onBlur = () => setFocused(false);
+
   return (
     <div className={classes.center}>
       <input
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        onFocus={_onFocus}
+        onBlur={_onBlur}
         className={classes.searchInput}
         placeholder="Search"
       />
+      {focused && (
+        <button onClick={_onBlur} className={classes.clearButton}>
+          <Icon name="clearSearch" />
+        </button>
+      )}
       {!focused && (
         <div className={classes.searchButton}>
           <div className={classes.searchPlaceholder}>
