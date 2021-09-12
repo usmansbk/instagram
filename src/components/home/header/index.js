@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon, { Home } from "../../common/icon";
+import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -58,7 +58,10 @@ const Nav = () => {
     <div className={classes.nav}>
       <ul className={classes.navLinks}>
         <li>
-          <Home />
+          <HomeSolid />
+        </li>
+        <li>
+          <HomeOutline />
         </li>
       </ul>
     </div>
