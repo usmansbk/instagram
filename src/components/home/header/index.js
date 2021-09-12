@@ -16,7 +16,7 @@ import logo from "./logo.png";
 
 const Logo = () => (
   <div className={classes.left}>
-    <Link to="/" className={classes.link}>
+    <Link to="/i" className={classes.link}>
       <div className={classes.navBrand}>
         <img src={logo} alt="" className={classes.logo} />
       </div>
