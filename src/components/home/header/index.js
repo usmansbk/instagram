@@ -70,43 +70,31 @@ const Nav = () => {
     <div className={classes.nav}>
       <ul className={classes.navLinks}>
         <li>
-          <div
-            className={classes.navButton}
-            to="/"
-            onClick={() => setActiveIndex(0)}
-          >
+          <Link to="/i" onClick={() => setActiveIndex(0)}>
             <NavIcon
               isActive={activeIndex === 0}
               activeComponent={<HomeSolid />}
               inActiveComponent={<HomeOutline />}
             />
-          </div>
+          </Link>
         </li>
         <li>
-          <div
-            className={classes.navButton}
-            to="/direct"
-            onClick={() => setActiveIndex(1)}
-          >
+          <Link to="/i/direct" onClick={() => setActiveIndex(1)}>
             <NavIcon
               isActive={activeIndex === 1}
               activeComponent={<MessengerSolid />}
               inActiveComponent={<MessengerOutline />}
             />
-          </div>
+          </Link>
         </li>
         <li>
-          <div
-            className={classes.navButton}
-            to="/explore"
-            onClick={() => setActiveIndex(2)}
-          >
+          <Link to="/i/explore" onClick={() => setActiveIndex(2)}>
             <NavIcon
               isActive={activeIndex === 2}
               activeComponent={<ExploreSolid />}
               inActiveComponent={<ExploreOutline />}
             />
-          </div>
+          </Link>
         </li>
         <li>
           <div className={classes.navButton} onClick={() => setActiveIndex(3)}>
