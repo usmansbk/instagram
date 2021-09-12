@@ -15,20 +15,27 @@ const Logo = () => (
 );
 
 const SearchInput = () => {
+  const [value, setValue] = useState("");
   const [focused, setFocused] = useState(false);
+  const cancelSearch = () => {
+    setFocused(false);
+    setValue("");
+  };
   const _onFocus = () => setFocused(true);
   const _onBlur = () => setFocused(false);
 
   return (
     <div className={classes.center}>
       <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         onFocus={_onFocus}
         onBlur={_onBlur}
         className={classes.searchInput}
         placeholder="Search"
       />
       {focused && (
-        <button onClick={_onBlur} className={classes.clearButton}>
+        <button onMouseDown={cancelSearch} className={classes.clearButton}>
           <Icon name="clearSearch" />
         </button>
       )}
@@ -36,7 +43,9 @@ const SearchInput = () => {
         <div className={classes.searchButton}>
           <div className={classes.searchPlaceholder}>
             <Icon name="searchIcon" />
-            <span className={classes.searchPlaceholderText}>Search</span>
+            <span className={classes.searchPlaceholderText}>
+              {value || "Search"}
+            </span>
           </div>
         </div>
       )}
