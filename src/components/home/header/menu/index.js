@@ -1,15 +1,20 @@
+import clsx from "clsx";
 import { Profile } from "../../../common/icon";
 import classes from "./index.module.css";
 
-const Menu = ({ children }) => {
+const Menu = ({ children, className }) => {
   return (
-    <div className={classes.container}>
+    <div className={clsx(classes.container, className)}>
       <div className={classes.overlay} />
       <div className={classes.content}>
         <div className={classes.body}>{children}</div>
       </div>
     </div>
   );
+};
+
+export const MenuDivider = () => {
+  return <hr className={classes.divider} />;
 };
 
 export const MenuItem = ({ text }) => {
@@ -23,6 +28,10 @@ export const MenuItem = ({ text }) => {
       </div>
     </div>
   );
+};
+
+export const MenuFooter = ({ children }) => {
+  return <div className={classes.footer}>{children}</div>;
 };
 
 export default Menu;

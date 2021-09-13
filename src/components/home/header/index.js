@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
 import AccountIcon from "./account";
-import Menu, { MenuItem } from "./menu";
+import Menu, { MenuDivider, MenuItem, MenuFooter } from "./menu";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -73,10 +73,14 @@ const Nav = () => {
         <li>
           <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
             <AccountIcon isActive={activeIndex === 4} />
-            <Menu>
+            <Menu className={classes.menu}>
               <Link to="/profile" className={classes.link}>
                 <MenuItem text="Profile" />
               </Link>
+              <MenuDivider />
+              <MenuFooter>
+                <button className={classes.logoutButton}>Log out</button>
+              </MenuFooter>
             </Menu>
           </div>
         </li>
