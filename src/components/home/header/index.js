@@ -86,7 +86,9 @@ const Nav = () => {
                 </Link>
                 <MenuDivider />
                 <MenuFooter>
-                  <Link className={classes.logoutButton}>Log out</Link>
+                  <Link to="/login" className={classes.logoutButton}>
+                    Log out
+                  </Link>
                 </MenuFooter>
               </Menu>
             )}
