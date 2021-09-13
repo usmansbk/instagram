@@ -1,4 +1,6 @@
 .container {
+  display: flex;
+  flex-direction: column;
   height: 362px;
   width: 375px;
   padding: 12px 0 0 0;
@@ -13,4 +15,31 @@
 
 .notch {
   left: 187.5px;
+}
+
+.header {
+  margin: 4px 16px 0;
+  max-height: 24px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.text {
+  color: #8e8e8e;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin: -3px 0 -4px 0;
 }
