@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
-import AccountIcon from "./Account";
+import Icon, { HomeSolid, HomeOutline, Profile } from "../../common/icon";
+import AccountIcon from "./account";
+import Menu, { MenuDivider, MenuItem, MenuFooter } from "./menu";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -70,8 +71,27 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
-            <AccountIcon isActive={activeIndex === 4} />
+          <div className={classes.navButton}>
+            <div onClick={() => setActiveIndex(4)}>
+              <AccountIcon isActive={activeIndex === 4} />
+            </div>
+            {activeIndex === 4 && (
+              <Menu
+                className={classes.menu}
+                notchClass={classes.notch}
+                onDismiss={() => setActiveIndex(0)}
+              >
+                <Link to="/profile" className={classes.link}>
+                  <MenuItem text="Profile" icon={<Profile />} />
+                </Link>
+                <MenuDivider />
+                <MenuFooter>
+                  <Link to="/login" className={classes.logoutButton}>
+                    Log out
+                  </Link>
+                </MenuFooter>
+              </Menu>
+            )}
           </div>
         </li>
       </ul>

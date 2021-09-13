@@ -129,6 +129,30 @@
   cursor: pointer;
 }
 
+.link:hover {
+  background-color: #fafafa;
+}
+
+.menu {
+  margin-left: -180px;
+}
+
+.notch {
+  left: 184px;
+}
+
+.logoutButton {
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+}
+
 @media screen and (min-width: 480px) {
   .center {
     display: flex;
