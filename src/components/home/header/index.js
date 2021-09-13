@@ -71,17 +71,24 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
-            <AccountIcon isActive={activeIndex === 4} />
-            <Menu className={classes.menu}>
-              <Link to="/profile" className={classes.link}>
-                <MenuItem text="Profile" />
-              </Link>
-              <MenuDivider />
-              <MenuFooter>
-                <button className={classes.logoutButton}>Log out</button>
-              </MenuFooter>
-            </Menu>
+          <div className={classes.navButton}>
+            <div onClick={() => setActiveIndex(4)}>
+              <AccountIcon isActive={activeIndex === 4} />
+            </div>
+            {activeIndex === 4 && (
+              <Menu
+                className={classes.menu}
+                onDismiss={() => setActiveIndex(0)}
+              >
+                <Link to="/profile" className={classes.link}>
+                  <MenuItem text="Profile" />
+                </Link>
+                <MenuDivider />
+                <MenuFooter>
+                  <button className={classes.logoutButton}>Log out</button>
+                </MenuFooter>
+              </Menu>
+            )}
           </div>
         </li>
       </ul>
