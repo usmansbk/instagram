@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
 import AccountIcon from "./account";
+import Menu from "./menu";
 import classes from "./index.module.css";
 import logo from "./logo.png";
 
@@ -72,7 +73,7 @@ const Nav = () => {
         <li>
           <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
             <AccountIcon isActive={activeIndex === 4} />
-            <div className={classes.menuContainer}></div>
+            <Menu />
           </div>
         </li>
       </ul>
