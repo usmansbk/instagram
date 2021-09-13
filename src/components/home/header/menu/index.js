@@ -4,6 +4,7 @@ const Menu = () => {
   return (
     <div className={classes.container}>
       <div className={classes.overlay} />
+      <div className={classes.content}></div>
     </div>
   );
 };

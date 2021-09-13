@@ -13,3 +13,17 @@
   z-index: 2;
   position: fixed;
 }
+
+.content {
+  transform-origin: top center;
+  transform: translateY(0);
+  transition: opacity 75ms linear, transform 38ms ease-out;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  color: #262626;
+}
