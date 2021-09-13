@@ -1,3 +1,4 @@
+import { Profile } from "../../../common/icon";
 import classes from "./index.module.css";
 
 const Menu = ({ children }) => {
@@ -14,7 +15,9 @@ const Menu = ({ children }) => {
 export const MenuItem = ({ text }) => {
   return (
     <div className={classes.menuItem}>
-      <div></div>
+      <div>
+        <Profile />
+      </div>
       <div className={classes.textWrapper}>
         <p className={classes.text}>{text}</p>
       </div>

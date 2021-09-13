@@ -129,6 +129,10 @@
   cursor: pointer;
 }
 
+.link:hover {
+  background-color: #fafafa;
+}
+
 @media screen and (min-width: 480px) {
   .center {
     display: flex;

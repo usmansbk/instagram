@@ -74,7 +74,9 @@ const Nav = () => {
           <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
             <AccountIcon isActive={activeIndex === 4} />
             <Menu>
-              <MenuItem text="Profile" />
+              <Link to="/profile" className={classes.link}>
+                <MenuItem text="Profile" />
+              </Link>
             </Menu>
           </div>
         </li>
