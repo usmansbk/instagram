@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { Profile } from "../../../common/icon";
 import classes from "./index.module.css";
 
 const Menu = ({ children, className, onDismiss, notchClass }) => {
@@ -18,12 +17,10 @@ export const MenuDivider = () => {
   return <hr className={classes.divider} />;
 };
 
-export const MenuItem = ({ text }) => {
+export const MenuItem = ({ text, icon }) => {
   return (
     <div className={classes.menuItem}>
-      <div>
-        <Profile />
-      </div>
+      <div>{icon}</div>
       <div className={classes.textWrapper}>
         <p className={classes.text}>{text}</p>
       </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
+import Icon, { HomeSolid, HomeOutline, Profile } from "../../common/icon";
 import AccountIcon from "./account";
 import Menu, { MenuDivider, MenuItem, MenuFooter } from "./menu";
 import classes from "./index.module.css";
@@ -82,11 +82,13 @@ const Nav = () => {
                 onDismiss={() => setActiveIndex(0)}
               >
                 <Link to="/profile" className={classes.link}>
-                  <MenuItem text="Profile" />
+                  <MenuItem text="Profile" icon={<Profile />} />
                 </Link>
                 <MenuDivider />
                 <MenuFooter>
-                  <button className={classes.logoutButton}>Log out</button>
+                  <Link to="/login" className={classes.link}>
+                    Log out
+                  </Link>
                 </MenuFooter>
               </Menu>
             )}
