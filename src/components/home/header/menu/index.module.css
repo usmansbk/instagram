@@ -27,3 +27,39 @@
   flex-direction: column;
   color: #262626;
 }
+
+.body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  padding: 8px 16px;
+  display: flex;
+}
+
+.textWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #262626;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
