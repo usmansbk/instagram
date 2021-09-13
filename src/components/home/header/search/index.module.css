@@ -5,3 +5,12 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.modal {
+  margin-left: -80px;
+  top: 12px;
+}
+
+.notch {
+  left: 187.5px;
+}
