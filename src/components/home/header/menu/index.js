@@ -2,11 +2,12 @@ import clsx from "clsx";
 import { Profile } from "../../../common/icon";
 import classes from "./index.module.css";
 
-const Menu = ({ children, className, onDismiss }) => {
+const Menu = ({ children, className, onDismiss, notchClass }) => {
   return (
     <div className={clsx(classes.container, className)}>
       <div className={classes.overlay} onClick={onDismiss} />
       <div className={classes.content}>
+        <div className={clsx(classes.notch, notchClass)} />
         <div className={classes.body}>{children}</div>
       </div>
     </div>

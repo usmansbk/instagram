@@ -137,6 +137,10 @@
   margin-left: -180px;
 }
 
+.notch {
+  left: 184px;
+}
+
 .logoutButton {
   background-color: transparent;
   cursor: pointer;

@@ -78,6 +78,7 @@ const Nav = () => {
             {activeIndex === 4 && (
               <Menu
                 className={classes.menu}
+                notchClass={classes.notch}
                 onDismiss={() => setActiveIndex(0)}
               >
                 <Link to="/profile" className={classes.link}>
