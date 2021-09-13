@@ -1,15 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon, {
-  HomeSolid,
-  HomeOutline,
-  MessengerSolid,
-  MessengerOutline,
-  HeartSolid,
-  HeartOutline,
-  ExploreSolid,
-  ExploreOutline,
-} from "../../common/icon";
+import Icon, { HomeSolid, HomeOutline } from "../../common/icon";
 import AccountIcon from "./Account";
 import classes from "./index.module.css";
 import logo from "./logo.png";
@@ -79,40 +70,9 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/i/direct" onClick={() => setActiveIndex(1)}>
-            <NavIcon
-              isActive={activeIndex === 1}
-              activeComponent={<MessengerSolid />}
-              inActiveComponent={<MessengerOutline />}
-            />
-          </Link>
-        </li>
-        <li>
-          <Link to="/i/explore" onClick={() => setActiveIndex(2)}>
-            <NavIcon
-              isActive={activeIndex === 2}
-              activeComponent={<ExploreSolid />}
-              inActiveComponent={<ExploreOutline />}
-            />
-          </Link>
-        </li>
-        <li>
-          <div className={classes.navButton} onClick={() => setActiveIndex(3)}>
-            <NavIcon
-              isActive={activeIndex === 3}
-              activeComponent={<HeartSolid />}
-              inActiveComponent={<HeartOutline />}
-            />
-          </div>
-        </li>
-        <li>
-          <Link
-            to="/login"
-            className={classes.navButton}
-            onClick={() => setActiveIndex(4)}
-          >
+          <div className={classes.navButton} onClick={() => setActiveIndex(4)}>
             <AccountIcon isActive={activeIndex === 4} />
-          </Link>
+          </div>
         </li>
       </ul>
     </div>
