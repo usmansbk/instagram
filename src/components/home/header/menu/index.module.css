@@ -1,4 +1,15 @@
 .container {
   top: 15px;
   display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
 }
