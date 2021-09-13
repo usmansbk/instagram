@@ -5,6 +5,7 @@ import AccountIcon from "./account";
 import Menu, { MenuDivider, MenuItem, MenuFooter } from "./menu";
 import classes from "./index.module.css";
 import logo from "./logo.png";
+import SearchResult from "./search";
 
 const Logo = () => (
   <div className={classes.left}>
@@ -51,6 +52,7 @@ const SearchInput = () => {
           </div>
         </div>
       )}
+      {focused && <SearchResult />}
     </div>
   );
 };
