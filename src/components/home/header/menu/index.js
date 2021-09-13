@@ -20,7 +20,7 @@ export const MenuDivider = () => {
 export const MenuItem = ({ text, icon }) => {
   return (
     <div className={classes.menuItem}>
-      <div>{icon}</div>
+      {!!icon && <div>{icon}</div>}
       <div className={classes.textWrapper}>
         <p className={classes.text}>{text}</p>
       </div>
