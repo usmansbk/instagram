@@ -151,10 +151,12 @@
   white-space: nowrap;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 @media screen and (min-width: 480px) {
   .center {
     display: flex;
+    flex-direction: column;
   }
 }

@@ -1,0 +1,16 @@
+.container {
+  height: 362px;
+  width: 375px;
+  padding: 12px 0 0 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  margin-left: -80px;
+  top: 12px;
+}
+
+.notch {
+  left: 187.5px;
+}
